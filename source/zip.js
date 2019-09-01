@@ -18,4 +18,4 @@ let zip = (...objects) => {
         }
     }
     return newObject
-}
+};
