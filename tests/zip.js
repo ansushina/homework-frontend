@@ -92,7 +92,7 @@ QUnit.module('Тестируем функцию zip', function () {
             attr: null  
         };  
         assert.deepEqual(zip(obj1,obj2), obj3);
-        assert.deepEqual(zip({b:{c:{k:1}}},{r:{f:2}}), {b:{c:{k:1}},r:{f:2}});
+        assert.deepEqual(zip({b:{c:{k:1}}}, {r:{f:2}}), {b:{c:{k:1}}, r:{f:2}});
 	});
     
     QUnit.test('Функция правильно работает с неверно переданными параметрами', function (assert) {
