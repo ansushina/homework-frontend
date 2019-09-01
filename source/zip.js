@@ -16,7 +16,7 @@ const zip = (...objects) => {
             if ( !(key in newObject) ) {
                 newObject[key] = obj[key];
             } else if (typeof newObject[key] === 'object') {
-                 newObject[key] = zip(newObject[key], obj[key]);
+                newObject[key] = zip(newObject[key], obj[key]);
             }
         }
     }
