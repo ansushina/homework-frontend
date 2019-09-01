@@ -6,16 +6,18 @@
 * @returns {object}
 */
 
-let zip = (...objects) => {
-    let newObject = {};
+const zip = (...objects) => {
+    const newObject = {};
     
     for (let obj of objects) {
         if (typeof(obj) === 'string') continue;
+        
         for (let key in obj){
-            if (!(key in newObject)){
+            if ( !(key in newObject) ) {
                 newObject[key] = obj[key];
             }  
         }
     }
-    return newObject
+    
+    return newObject;
 };
