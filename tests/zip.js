@@ -91,20 +91,27 @@ QUnit.module('Тестируем функцию zip', function () {
             country:'russia',
             attr: null  
         };  
-        assert.deepEqual(zip(obj1,obj2), obj3);
+        
+        assert.deepEqual(zip(obj1, obj2), obj3);
         assert.deepEqual(zip({b:{c:{k:1}}}, {r:{f:2}}), {b:{c:{k:1}}, r:{f:2}});
 	});
     
     QUnit.test('Функция правильно работает с неверно переданными параметрами', function (assert) {
-        assert.deepEqual(zip(),{});
-        assert.deepEqual(zip(1,2,3,4),{});
-        assert.deepEqual(zip(1,2,3,4, {age:5}),{age:5});
-        assert.deepEqual(zip(true,false),{});
-        assert.deepEqual(zip(true, {age:5}),{age:5});
-        assert.deepEqual(zip(null),{});
-        assert.deepEqual(zip(null, {age:5}),{age:5});
+        assert.deepEqual(zip(), {});
+        
+        assert.deepEqual(zip(1,2,3,4), {});
+        assert.deepEqual(zip(1,2,3,4, {age:5}), {age:5});
+        
+
+        
+        assert.deepEqual(zip(true,false), {});
+        assert.deepEqual(zip(true, {age:5}), {age:5});
+        
+        assert.deepEqual(zip(null), {});
+        assert.deepEqual(zip(null, {age:5}), {age:5});
+        
         assert.deepEqual(zip(undefined),{});
-        assert.deepEqual(zip(undefined, {age:5}),{age:5});
+        assert.deepEqual(zip(undefined, {age:5}), {age:5});
         
     });
 });
